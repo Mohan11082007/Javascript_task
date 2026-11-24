@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-1</title>
+</head>
+<body>
+    <h1>Web Application</h1>
+    <p>This is a simple web application.</p>
+    <table border="2">
+    <tr>
+        <th>
+            <a href="Html.html"><h1>HTML</h1></a>
+        </th>
+        <th>
+            <a href="css.html"><h1>CSS</h1></a>
+        </th>
+    
+    
+    </tr>
+
+    <tr>
+        <th>
+            <a href="JAVA.html"><h1>JAVA</h1></a>
+        </th>
+        <th>
+            <a href="PYTHON.html"><h1>PYTHON</h1></a>
+        </th>
+    </tr>
+</table>
+<script>
+    let currentDate = new Date();
+    let currentYear = currentDate.getFullYear();
+    console.log("Current Year: " + currentYear);
+    let age=12;
+    if(age>=18){
+        console.log("You are eligible to vote.");
+    } else {
+        console.log("You are not eligible to vote.");           
+    }
+    function Student(name,clg)
+    {
+        console.log("Student Name: " + name);
+        console.log("College Name: " + clg);
+    }
+    Student("John Doe", "ABC College");
+    Student("Jane Smith", "XYZ University");    
+
+    let data = function()
+    {
+        return "Hello Javascript!";
+    }
+    console.log("Data: " + data());
+    let data1 =() => {
+        return "Hello Arrow Function";
+    }
+    console.log(data1());
+    let add = (a,b) => {
+        return a*b;
+    }
+    console.log("ans: " + add(8,5));
+
+    function sece(callback)
+    {
+        console.log("This is the sece function.");
+    }
+    function stu()
+    {
+        console.log("This is the stu function.");
+    }
+    sece(stu());
+
+    let fetch_api = new Promise((resolve, reject) => {
+        // Promise logic here
+        let api = true;
+        if(api) {
+            resolve("API call successful");
+        } else {
+            reject("API call failed");
+        }
+    })
+    fetch_api.then(data => console.log(data))
+
+    let fetchapi = new Promise((resolve, reject) => {
+        // Promise logic here
+        let api = true;
+        if(api) {
+            resolve("API call successful");
+        } else {
+            setTimeout(() => {
+                reject("API call failed");
+            }, 2000); // Simulating an asynchronous operation with a delay
+        }
+    })
+    fetchapi.then(data => console.log(data))
+</script>
+</body>
+</html>
